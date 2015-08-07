@@ -7,7 +7,12 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
     $scope.zoomSelected=0;
     $scope.typeFile = 'code';
     $scope.fileShow = {};
-    $scope.modeView = "css";
+    $scope.codeMode = [];
+    $scope.codeMode['js']="javascript";
+    $scope.codeMode['css']="css";
+    $scope.codeMode['html']="htmlmixed";
+    $scope.codeMode['xml']="xml";
+    $scope.modeView = $scope.codeMode['js'];
     $scope.editorOptions = {
         lineWrapping : true,
         lineNumbers: true,
@@ -74,6 +79,11 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
            $scope.typeFile = 'image';
            $scope.code = node.path;
           } else {
+            if($scope.codeMode[ext]){
+              $scope.modeView = $scope.codeMode[ext];
+            } else {
+              $scope.modeView = $scope.codeMode['js'];
+            }
             $scope.typeFile = 'code';
             $scope.code = res;
           }
