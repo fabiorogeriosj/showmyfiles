@@ -24,12 +24,6 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
         };
       }
     };
-    // The ui-codemirror option
-    $scope.cmOption = {
-      lineNumbers: true,
-      indentWithTabs: true,
-      
-    };
 
     $scope.socket.on('filechange', function (res){
         if($scope.nodeOpen.path && res.filename == $scope.nodeOpen.path){
@@ -73,7 +67,6 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
           data: {file: node.path}
         })
         .success(function(res) {
-          console.log(res)
           var ext = node.path.split('.').pop()+"".toLocaleLowerCase();
           if(ext=='png' || ext=='gif' || ext=='jpg' || ext=='jpeg'){
            $scope.typeFile = 'image';

@@ -44,8 +44,12 @@
 			<img src="images/zoom58.png" title="Zoom" ng-click="zoomOut()">
 			<img src="images/zoom61.png" title="Zoom" ng-click="zoomIn()">
 		</div>
-		<ui-codemirror ui-codemirror-opts="editorOptions" ng-model="code"></ui-codemirror>
-		<img ng-src="/getfile?file={{code}}" ng-show="typeFile == 'image'">
+		<ui-codemirror ui-codemirror-opts="editorOptions" ng-model="code" ng-show="typeFile != 'image'"></ui-codemirror>
+		<div class="showimageselect" ng-show="typeFile == 'image'">
+			<pre>{{code}}</pre>
+			<br>
+			<img ng-src="/getfile?file={{code}}" >
+		</div>
 	</div>
 
 	<script type="text/javascript">
