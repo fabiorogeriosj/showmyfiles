@@ -22,6 +22,24 @@
     opacity: 0.2;
     filter: alpha(opacity=20);
 }
+.btshowscreen {
+	background-color: #00BCD4;
+	padding: 6px;
+	color: #fff;
+	cursor: pointer;
+}
+.showOn {
+	background-color: #008394;
+}
+#imageScreen {
+	max-width: 100%;
+	max-height: 100%;
+}
+.btshowscreen img {
+	float: left;
+	margin-right: 8px;
+	margin-top: 3px;
+}
 .bydev:hover {
 	opacity: 1;
     filter: alpha(opacity=100);	

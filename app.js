@@ -7,10 +7,22 @@ var bodyParser = require('body-parser');
 var fs = require('fs');
 var path = require("path");
 var os = require('os');
+var exec = require('child_process').exec;
+var child;
 
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+function getScreen(){
+  child = exec(__dirname+'/nircmd.fbi savescreenshot www/images/screen.png',
+    function (error, stdout, stderr) {
+      io.sockets.emit('showscreen');
+      setTimeout(getScreen, config.timeGetScreen);
+  });
+}
+
+getScreen();
 
 //Socket
 io.on('connection', function (socket) {});
@@ -60,7 +72,11 @@ app.get('/', function(req, res) {
 	res.sendfile(FRONTEND_PATH+'/index.html');
 });
 app.post('/getfiles', function(req, res){
-	res.jsonp(dirTree(config.dirlist));
+  if(config.dirlist){
+    res.jsonp(dirTree(config.dirlist));
+  } else {
+    res.jsonp({});
+  }
 });
 app.post('/getfile', function(req, res){
 	if(req.body.file){

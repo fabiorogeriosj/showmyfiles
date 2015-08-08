@@ -31,6 +31,16 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
         }
     });
 
+    $scope.showScreen = function(){
+      $scope.socket.on('showscreen', function(){
+        console.log("gerou...");
+        $scope.typeFile = 'screen';
+        $scope.$apply();
+        var imageUrl = 'images/screen.png';
+        $scope.decachedImageUrl = imageUrl + '?decache=' + Math.random();
+      });
+    }
+
     $scope.loadFiles = function(){
       $scope.loadingFiles=true;
       $http.post('/getfiles', {}).
@@ -58,6 +68,7 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
     $scope.loadFiles();
 
     $scope.showSelected = function(node){
+      $scope.socket.removeAllListeners("showscreen");
       if(node.type=="file"){
         $scope.nodeOpen = node;
         node.loading=true;

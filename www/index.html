@@ -31,6 +31,10 @@
 		</strong>
 	</div>
 	<div class="ui-layout-west files">
+		<div class="btshowscreen" ng-click="showScreen()" ng-class="{showOn: typeFile=='screen'}">
+			<img src="images/screen54.png">
+			Show Screen
+		</div>
 		<treecontrol class="tree-light" tree-model="dataForTheTree" on-selection="showSelected(node)">
 		     <img class="loading" src="images/ajax-loader.gif" ng-show="node.loading"> {{node.name}}
 		</treecontrol>
@@ -40,15 +44,16 @@
 		</div>
 	</div>
 	<div class="ui-layout-center code">
-		<div class="controlzoom">
+		<img id="imageScreen" ng-src="{{decachedImageUrl}}" ng-show="typeFile=='screen'">
+		<div class="controlzoom" ng-show="typeFile == 'code'">
 			<img src="images/zoom58.png" title="Zoom" ng-click="zoomOut()">
 			<img src="images/zoom61.png" title="Zoom" ng-click="zoomIn()">
 		</div>
-		<ui-codemirror ui-codemirror-opts="editorOptions" ng-model="code" ng-show="typeFile != 'image'"></ui-codemirror>
+		<ui-codemirror ui-codemirror-opts="editorOptions" ng-model="code" ng-show="typeFile == 'code'"></ui-codemirror>
 		<div class="showimageselect" ng-show="typeFile == 'image'">
 			<pre>{{code}}</pre>
 			<br>
-			<img ng-src="/getfile?file={{code}}" >
+			<img ng-src="/getfile?file={{typeFile=='image'?code:''}}" >
 		</div>
 	</div>
 
