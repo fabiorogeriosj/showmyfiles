@@ -1,1 +1,2 @@
-Aplicativo para exibir uma estrutura de arquivos e sincronizar clients via socket!
+Aplicativo para exibir uma estrutura de arquivos, ou tela, e sincronizar via socket!
+

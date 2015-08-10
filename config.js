@@ -8,7 +8,7 @@ Use / (win, linux, mac)
 example:
 config.dirlist = "C:/Users/Alunos/Desktop/showmyfiles";
 */
-config.dirlist = "";
+config.dirlist = "D:/workspace/manady";
 
 /*
 Min 100
