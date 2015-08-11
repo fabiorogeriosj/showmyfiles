@@ -8,15 +8,18 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
     $scope.typeFile = 'code';
     $scope.fileShow = {};
     $scope.codeMode = [];
+    $scope.dataForTheTree = [];
     $scope.codeMode['js']="javascript";
     $scope.codeMode['css']="css";
     $scope.codeMode['html']="htmlmixed";
     $scope.codeMode['xml']="xml";
     $scope.modeView = $scope.codeMode['js'];
+    $scope.thereIsFiles = false;
+    $scope.thereIsFilesDownload = false;
     $scope.editorOptions = {
         lineWrapping : true,
         lineNumbers: true,
-        readOnly: 'nocursor',
+        readOnly: true,
         mode: $scope.modeView,
         onLoad : function(_cm){
         $scope.modeChanged = function(){
@@ -26,9 +29,13 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
     };
 
     $scope.socket.on('filechange', function (res){
-        if($scope.nodeOpen.path && res.filename == $scope.nodeOpen.path){
+        if($scope.nodeOpen.path && res.filename == $scope.nodeOpen.path && $scope.typeFile != "screen"){
           $scope.showSelected($scope.nodeOpen);
         }
+    });
+
+    $scope.socket.on('filechangedownload', function (res){
+        $scope.loadFilesDownload();
     });
 
     $scope.showScreen = function(){
@@ -45,9 +52,27 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
       $scope.loadingFiles=true;
       $http.post('/getfiles', {}).
         then(function(response) {
-          console.log(response);
           $scope.dataForTheTree = response.data;
+          if($scope.dataForTheTree && $scope.dataForTheTree.children&& $scope.dataForTheTree.children.length){
+            $scope.thereIsFiles = true;
+          } else {
+            $scope.thereIsFiles = false;
+          }
           $scope.loadingFiles=false;
+        }, function(response) {
+          console.log("error: ", response);
+      });
+    }
+
+    $scope.loadFilesDownload = function(){
+      $http.post('/getfilesdownload', {}).
+        then(function(response) {
+          $scope.filesDownloads = response.data;
+          if($scope.filesDownloads.children.length){
+            $scope.thereIsFilesDownload = true;
+          } else {
+            $scope.thereIsFilesDownload = false;
+          }
         }, function(response) {
           console.log("error: ", response);
       });
@@ -66,6 +91,12 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
     }
 
     $scope.loadFiles();
+    $scope.loadFilesDownload();
+
+    $scope.showSelectedToDownload = function(node){
+      var win = window.open("/downloads/"+node.name, '_blank');
+      win.focus();
+    }
 
     $scope.showSelected = function(node){
       $scope.socket.removeAllListeners("showscreen");

@@ -41,7 +41,7 @@ function getFiles (dir, files_){
     return files_;
 }
 
-function dirTree(filename) {
+function dirTree(filename, notObserver) {
     var stats = fs.lstatSync(filename),
         info = {
             path: filename,
@@ -55,13 +55,19 @@ function dirTree(filename) {
         });
     } else {
         info.type = "file";
-        fs.watchFile(filename, function (curr, prev) {
-		  	io.sockets.emit('filechange', { filename: filename });
-		});
+        if(!notObserver){
+          fs.watchFile(filename, function (curr, prev) {
+              io.sockets.emit('filechange', { filename: filename });
+          });
+        }
     }
 
     return info;
 }
+
+fs.watch(__dirname+'/www/downloads', function (event, filename) {
+  io.sockets.emit('filechangedownload', { });
+});
 
 var port = process.env.PORT || config.app.port;
 process.setMaxListeners(0);
@@ -77,6 +83,9 @@ app.post('/getfiles', function(req, res){
   } else {
     res.jsonp({});
   }
+});
+app.post('/getfilesdownload', function(req, res){
+  res.jsonp(dirTree(__dirname+'/www/downloads', true));
 });
 app.post('/getfile', function(req, res){
 	if(req.body.file){

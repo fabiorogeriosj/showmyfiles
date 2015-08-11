@@ -35,9 +35,16 @@
 			<img src="images/screen54.png">
 			Show Screen
 		</div>
+		<div class="title" ng-show="thereIsFiles">FOLDERS</div>
 		<treecontrol class="tree-light" tree-model="dataForTheTree" on-selection="showSelected(node)">
 		     <img class="loading" src="images/ajax-loader.gif" ng-show="node.loading"> {{node.name}}
 		</treecontrol>
+		<div class="title" ng-show="thereIsFilesDownload">DOWNLOADS</div>
+		<div>
+			<treecontrol class="tree-light" tree-model="filesDownloads" on-selection="showSelectedToDownload(node)">
+			     {{node.name}}
+			</treecontrol>
+		</div>
 		<div class="options">
 			<img src="images/arrows130.png" title="Reload files" ng-click="loadFiles()" ng-show="!loadingFiles">
 			<img src="images/ajax-loader.gif" ng-show="loadingFiles">
