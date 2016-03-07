@@ -1,4 +1,4 @@
-angular.module('showMyFile', ['ui.codemirror','treeControl'])
+angular.module('showMyFile', ['treeControl'])
   .controller('showController', function($scope, $http) {
     
     $scope.socket = io.connect();
@@ -7,37 +7,22 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
     $scope.zoomSelected=0;
     $scope.typeFile = 'code';
     $scope.fileShow = {};
+    $scope.hidden = false;
     $scope.codeMode = [];
     $scope.dataForTheTree = [];
-    $scope.codeMode['js']="javascript";
-    $scope.codeMode['css']="css";
-    $scope.codeMode['html']="htmlmixed";
-    $scope.codeMode['xml']="xml";
-    $scope.modeView = $scope.codeMode['js'];
-    $scope.thereIsFiles = false;
     $scope.thereIsFilesDownload = false;
-    $scope.editorOptions = {
-        lineWrapping : true,
-        lineNumbers: true,
-        readOnly: true,
-        mode: $scope.modeView,
-        onLoad : function(_cm){
-        $scope.modeChanged = function(){
-          _cm.setOption("mode", $scope.modeView);
-        };
-      }
-    };
-
-    $scope.socket.on('filechange', function (res){
-        if($scope.nodeOpen.path && res.filename == $scope.nodeOpen.path && $scope.typeFile != "screen"){
-          $scope.showSelected($scope.nodeOpen);
-        }
-    });
 
     $scope.socket.on('filechangedownload', function (res){
         $scope.loadFilesDownload();
     });
 
+    $scope.hiddenButton = function (){
+      $scope.hidden = !$scope.hidden;
+    }
+    $scope.showScreenClick = function (){
+        $scope.hidden = true;
+        $scope.showScreen();
+    }
     $scope.showScreen = function(){
       $scope.socket.on('showscreen', function(){
         console.log("gerou...");
@@ -45,22 +30,6 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
         $scope.$apply();
         var imageUrl = 'images/screen.png';
         $scope.decachedImageUrl = imageUrl + '?decache=' + Math.random();
-      });
-    }
-
-    $scope.loadFiles = function(){
-      $scope.loadingFiles=true;
-      $http.post('/getfiles', {}).
-        then(function(response) {
-          $scope.dataForTheTree = response.data;
-          if($scope.dataForTheTree && $scope.dataForTheTree.children&& $scope.dataForTheTree.children.length){
-            $scope.thereIsFiles = true;
-          } else {
-            $scope.thereIsFiles = false;
-          }
-          $scope.loadingFiles=false;
-        }, function(response) {
-          console.log("error: ", response);
       });
     }
 
@@ -78,19 +47,6 @@ angular.module('showMyFile', ['ui.codemirror','treeControl'])
       });
     }
 
-    $scope.zoomIn = function(){
-      if($scope.zoomSelected < 7){
-        $scope.zoomSelected++;
-      }
-    }
-
-    $scope.zoomOut = function(){
-      if($scope.zoomSelected > -2){
-        $scope.zoomSelected--;
-      }
-    }
-
-    $scope.loadFiles();
     $scope.loadFilesDownload();
 
     $scope.showSelectedToDownload = function(node){

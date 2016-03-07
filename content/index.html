@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <form action="/" method="POST">
+      <input name="firstname" type="text" placeholder="Firstname"/>
+      <input name="lastname" type="text" placeholder="Lastname"/>
+      <input type="submit"/>
+    </form>
+  </body>
+</html>

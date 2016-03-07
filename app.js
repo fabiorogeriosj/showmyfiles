@@ -27,20 +27,6 @@ getScreen();
 //Socket
 io.on('connection', function (socket) {});
 
-function getFiles (dir, files_){
-    files_ = files_ || [];
-    var files = fs.readdirSync(dir);
-    for (var i in files){
-        var name = dir + '/' + files[i];
-        if (fs.statSync(name).isDirectory()){
-            getFiles(name, files_);
-        } else {
-            files_.push(name);
-        }
-    }
-    return files_;
-}
-
 function dirTree(filename, notObserver) {
     var stats = fs.lstatSync(filename),
         info = {
@@ -77,13 +63,6 @@ app.use(express.static(FRONTEND_PATH));
 app.get('/', function(req, res) {
 	res.sendfile(FRONTEND_PATH+'/index.html');
 });
-app.post('/getfiles', function(req, res){
-  if(config.dirlist){
-    res.jsonp(dirTree(config.dirlist));
-  } else {
-    res.jsonp({});
-  }
-});
 app.post('/getfilesdownload', function(req, res){
   res.jsonp(dirTree(__dirname+'/www/downloads', true));
 });
@@ -97,8 +76,10 @@ app.post('/getfile', function(req, res){
 app.get('/getfile', function(req, res){
   if(req.query.file){
     res.sendfile(req.query.file);
+  } else if(req.query.screen) {
+    res.sendfile(FRONTEND_PATH + "/images/screen.png");
   } else {
-    res.send("");
+    res.send("");  
   }
 });
 
