@@ -1,0 +1,929 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\fabio.INTRANET\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'robotjs' ]
+2 info using npm@3.3.4
+3 info using node@v4.1.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData robotjs
+8 silly fetchNamedPackageData robotjs
+9 silly mapToRegistry name robotjs
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/robotjs
+13 verbose request uri https://registry.npmjs.org/robotjs
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 11:31:23
+16 verbose request id 3e4791b9abc68aad
+17 http request GET https://registry.npmjs.org/robotjs
+18 http 200 https://registry.npmjs.org/robotjs
+19 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+19 verbose headers   etag: '"7CSCN2M5QS96CNO9TE6XXSXK"',
+19 verbose headers   'content-type': 'application/json',
+19 verbose headers   'cache-control': 'max-age=300',
+19 verbose headers   'content-length': '32826',
+19 verbose headers   'accept-ranges': 'bytes',
+19 verbose headers   date: 'Mon, 07 Mar 2016 14:36:27 GMT',
+19 verbose headers   via: '1.1 varnish',
+19 verbose headers   age: '0',
+19 verbose headers   connection: 'keep-alive',
+19 verbose headers   'x-served-by': 'cache-jfk1045-JFK',
+19 verbose headers   'x-cache': 'MISS',
+19 verbose headers   'x-cache-hits': '0',
+19 verbose headers   'x-timer': 'S1457361387.283403,VS0,VE175',
+19 verbose headers   vary: 'Accept' }
+20 silly get cb [ 200,
+20 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+20 silly get     etag: '"7CSCN2M5QS96CNO9TE6XXSXK"',
+20 silly get     'content-type': 'application/json',
+20 silly get     'cache-control': 'max-age=300',
+20 silly get     'content-length': '32826',
+20 silly get     'accept-ranges': 'bytes',
+20 silly get     date: 'Mon, 07 Mar 2016 14:36:27 GMT',
+20 silly get     via: '1.1 varnish',
+20 silly get     age: '0',
+20 silly get     connection: 'keep-alive',
+20 silly get     'x-served-by': 'cache-jfk1045-JFK',
+20 silly get     'x-cache': 'MISS',
+20 silly get     'x-cache-hits': '0',
+20 silly get     'x-timer': 'S1457361387.283403,VS0,VE175',
+20 silly get     vary: 'Accept' } ]
+21 verbose get saving robotjs to C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\registry.npmjs.org\robotjs\.cache.json
+22 silly install normalizeTree
+23 silly loadCurrentTree Finishing
+24 silly loadIdealTree Starting
+25 silly install loadIdealTree
+26 silly cloneCurrentTree Starting
+27 silly install cloneCurrentTreeToIdealTree
+28 silly cloneCurrentTree Finishing
+29 silly loadShrinkwrap Starting
+30 silly install loadShrinkwrap
+31 silly loadShrinkwrap Finishing
+32 silly loadAllDepsIntoIdealTree Starting
+33 silly install loadAllDepsIntoIdealTree
+34 silly resolveWithNewModule robotjs@0.3.7 checking installable status
+35 silly cache add args [ 'robotjs', null ]
+36 verbose cache add spec robotjs
+37 silly cache add parsed spec Result {
+37 silly cache add   raw: 'robotjs',
+37 silly cache add   scope: null,
+37 silly cache add   name: 'robotjs',
+37 silly cache add   rawSpec: '',
+37 silly cache add   spec: '*',
+37 silly cache add   type: 'range' }
+38 silly addNamed robotjs@*
+39 verbose addNamed "*" is a valid semver range for robotjs
+40 silly addNameRange { name: 'robotjs', range: '*', hasData: false }
+41 silly mapToRegistry name robotjs
+42 silly mapToRegistry using default registry
+43 silly mapToRegistry registry https://registry.npmjs.org/
+44 silly mapToRegistry uri https://registry.npmjs.org/robotjs
+45 verbose addNameRange registry:https://registry.npmjs.org/robotjs not in flight; fetching
+46 verbose get https://registry.npmjs.org/robotjs not expired, no request
+47 silly addNameRange number 2 { name: 'robotjs', range: '*', hasData: true }
+48 silly addNameRange versions [ 'robotjs',
+48 silly addNameRange   [ '0.0.1',
+48 silly addNameRange     '0.0.2',
+48 silly addNameRange     '0.0.3',
+48 silly addNameRange     '0.0.4',
+48 silly addNameRange     '0.0.5',
+48 silly addNameRange     '0.1.0',
+48 silly addNameRange     '0.1.1',
+48 silly addNameRange     '0.1.2',
+48 silly addNameRange     '0.1.3',
+48 silly addNameRange     '0.1.4',
+48 silly addNameRange     '0.2.0',
+48 silly addNameRange     '0.2.1',
+48 silly addNameRange     '0.2.2',
+48 silly addNameRange     '0.2.3',
+48 silly addNameRange     '0.2.4',
+48 silly addNameRange     '0.3.0',
+48 silly addNameRange     '0.3.1',
+48 silly addNameRange     '0.3.2',
+48 silly addNameRange     '0.3.3',
+48 silly addNameRange     '0.3.4',
+48 silly addNameRange     '0.3.5',
+48 silly addNameRange     '0.3.6',
+48 silly addNameRange     '0.3.7' ] ]
+49 silly addNamed robotjs@0.3.7
+50 verbose addNamed "0.3.7" is a plain semver version for robotjs
+51 silly mapToRegistry name robotjs
+52 silly mapToRegistry using default registry
+53 silly mapToRegistry registry https://registry.npmjs.org/
+54 silly mapToRegistry uri https://registry.npmjs.org/robotjs
+55 verbose addRemoteTarball https://registry.npmjs.org/robotjs/-/robotjs-0.3.7.tgz not in flight; adding
+56 verbose addRemoteTarball [ 'https://registry.npmjs.org/robotjs/-/robotjs-0.3.7.tgz',
+56 verbose addRemoteTarball   'fdfcb0d1c6a458aba71757cca1f8329073fb202a' ]
+57 info retry fetch attempt 1 at 11:31:24
+58 info attempt registry request try #1 at 11:31:24
+59 http fetch GET https://registry.npmjs.org/robotjs/-/robotjs-0.3.7.tgz
+60 http fetch 200 https://registry.npmjs.org/robotjs/-/robotjs-0.3.7.tgz
+61 silly fetchAndShaCheck shasum fdfcb0d1c6a458aba71757cca1f8329073fb202a
+62 verbose addTmpTarball C:\Users\FABIO~1.INT\AppData\Local\Temp\npm-6308-0e6c2fd6\registry.npmjs.org\robotjs\-\robotjs-0.3.7.tgz not in flight; adding
+63 verbose addTmpTarball already have metadata; skipping unpack for robotjs@0.3.7
+64 silly cache afterAdd robotjs@0.3.7
+65 verbose afterAdd C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\robotjs\0.3.7\package\package.json not in flight; writing
+66 verbose afterAdd C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\robotjs\0.3.7\package\package.json written
+67 silly fetchNamedPackageData nan
+68 silly mapToRegistry name nan
+69 silly mapToRegistry using default registry
+70 silly mapToRegistry registry https://registry.npmjs.org/
+71 silly mapToRegistry uri https://registry.npmjs.org/nan
+72 verbose request uri https://registry.npmjs.org/nan
+73 verbose request no auth needed
+74 info attempt registry request try #1 at 11:31:24
+75 verbose etag "BAVERG4EG5W3XHF012VJBMBOB"
+76 http request GET https://registry.npmjs.org/nan
+77 http 304 https://registry.npmjs.org/nan
+78 verbose headers { date: 'Mon, 07 Mar 2016 14:36:28 GMT',
+78 verbose headers   via: '1.1 varnish',
+78 verbose headers   'cache-control': 'max-age=300',
+78 verbose headers   etag: '"BAVERG4EG5W3XHF012VJBMBOB"',
+78 verbose headers   age: '289',
+78 verbose headers   connection: 'keep-alive',
+78 verbose headers   'x-served-by': 'cache-jfk1045-JFK',
+78 verbose headers   'x-cache': 'HIT',
+78 verbose headers   'x-cache-hits': '4',
+78 verbose headers   'x-timer': 'S1457361388.338175,VS0,VE0',
+78 verbose headers   vary: 'Accept' }
+79 silly get cb [ 304,
+79 silly get   { date: 'Mon, 07 Mar 2016 14:36:28 GMT',
+79 silly get     via: '1.1 varnish',
+79 silly get     'cache-control': 'max-age=300',
+79 silly get     etag: '"BAVERG4EG5W3XHF012VJBMBOB"',
+79 silly get     age: '289',
+79 silly get     connection: 'keep-alive',
+79 silly get     'x-served-by': 'cache-jfk1045-JFK',
+79 silly get     'x-cache': 'HIT',
+79 silly get     'x-cache-hits': '4',
+79 silly get     'x-timer': 'S1457361388.338175,VS0,VE0',
+79 silly get     vary: 'Accept' } ]
+80 verbose etag https://registry.npmjs.org/nan from cache
+81 verbose get saving nan to C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+82 silly resolveWithNewModule nan@2.2.0 checking installable status
+83 silly cache add args [ 'nan@^2.0.9', null ]
+84 verbose cache add spec nan@^2.0.9
+85 silly cache add parsed spec Result {
+85 silly cache add   raw: 'nan@^2.0.9',
+85 silly cache add   scope: null,
+85 silly cache add   name: 'nan',
+85 silly cache add   rawSpec: '^2.0.9',
+85 silly cache add   spec: '>=2.0.9 <3.0.0',
+85 silly cache add   type: 'range' }
+86 silly addNamed nan@>=2.0.9 <3.0.0
+87 verbose addNamed ">=2.0.9 <3.0.0" is a valid semver range for nan
+88 silly addNameRange { name: 'nan', range: '>=2.0.9 <3.0.0', hasData: false }
+89 silly mapToRegistry name nan
+90 silly mapToRegistry using default registry
+91 silly mapToRegistry registry https://registry.npmjs.org/
+92 silly mapToRegistry uri https://registry.npmjs.org/nan
+93 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+94 verbose get https://registry.npmjs.org/nan not expired, no request
+95 silly addNameRange number 2 { name: 'nan', range: '>=2.0.9 <3.0.0', hasData: true }
+96 silly addNameRange versions [ 'nan',
+96 silly addNameRange   [ '0.3.0-wip',
+96 silly addNameRange     '0.3.0-wip2',
+96 silly addNameRange     '0.3.0',
+96 silly addNameRange     '0.3.1',
+96 silly addNameRange     '0.3.2',
+96 silly addNameRange     '0.4.0',
+96 silly addNameRange     '0.4.1',
+96 silly addNameRange     '0.4.2',
+96 silly addNameRange     '0.4.3',
+96 silly addNameRange     '0.4.4',
+96 silly addNameRange     '0.5.0',
+96 silly addNameRange     '0.5.1',
+96 silly addNameRange     '0.5.2',
+96 silly addNameRange     '0.6.0',
+96 silly addNameRange     '0.7.0',
+96 silly addNameRange     '0.7.1',
+96 silly addNameRange     '0.8.0',
+96 silly addNameRange     '1.0.0',
+96 silly addNameRange     '1.1.0',
+96 silly addNameRange     '1.1.1',
+96 silly addNameRange     '1.1.2',
+96 silly addNameRange     '1.2.0',
+96 silly addNameRange     '1.3.0',
+96 silly addNameRange     '1.4.0',
+96 silly addNameRange     '1.4.1',
+96 silly addNameRange     '1.5.0',
+96 silly addNameRange     '1.4.2',
+96 silly addNameRange     '1.4.3',
+96 silly addNameRange     '1.5.1',
+96 silly addNameRange     '1.5.2',
+96 silly addNameRange     '1.6.0',
+96 silly addNameRange     '1.5.3',
+96 silly addNameRange     '1.6.1',
+96 silly addNameRange     '1.6.2',
+96 silly addNameRange     '1.7.0',
+96 silly addNameRange     '1.8.0',
+96 silly addNameRange     '1.8.1',
+96 silly addNameRange     '1.8.2',
+96 silly addNameRange     '1.8.3',
+96 silly addNameRange     '1.8.4',
+96 silly addNameRange     '1.9.0',
+96 silly addNameRange     '2.0.0',
+96 silly addNameRange     '2.0.1',
+96 silly addNameRange     '2.0.2',
+96 silly addNameRange     '2.0.3',
+96 silly addNameRange     '2.0.4',
+96 silly addNameRange     '2.0.5',
+96 silly addNameRange     '2.0.6',
+96 silly addNameRange     '2.0.7',
+96 silly addNameRange     '2.0.8',
+96 silly addNameRange     '2.0.9',
+96 silly addNameRange     '2.1.0',
+96 silly addNameRange     '2.2.0' ] ]
+97 silly addNamed nan@2.2.0
+98 verbose addNamed "2.2.0" is a plain semver version for nan
+99 silly mapToRegistry name nan
+100 silly mapToRegistry using default registry
+101 silly mapToRegistry registry https://registry.npmjs.org/
+102 silly mapToRegistry uri https://registry.npmjs.org/nan
+103 verbose addRemoteTarball https://registry.npmjs.org/nan/-/nan-2.2.0.tgz not in flight; adding
+104 verbose addRemoteTarball [ 'https://registry.npmjs.org/nan/-/nan-2.2.0.tgz',
+104 verbose addRemoteTarball   '779c07135629503cf6a7b7e6aab33049b3c3853c' ]
+105 info retry fetch attempt 1 at 11:31:24
+106 info attempt registry request try #1 at 11:31:24
+107 http fetch GET https://registry.npmjs.org/nan/-/nan-2.2.0.tgz
+108 http fetch 200 https://registry.npmjs.org/nan/-/nan-2.2.0.tgz
+109 silly fetchAndShaCheck shasum 779c07135629503cf6a7b7e6aab33049b3c3853c
+110 verbose addTmpTarball C:\Users\FABIO~1.INT\AppData\Local\Temp\npm-6308-0e6c2fd6\registry.npmjs.org\nan\-\nan-2.2.0.tgz not in flight; adding
+111 verbose addTmpTarball already have metadata; skipping unpack for nan@2.2.0
+112 silly cache afterAdd nan@2.2.0
+113 verbose afterAdd C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\nan\2.2.0\package\package.json not in flight; writing
+114 verbose afterAdd C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\nan\2.2.0\package\package.json written
+115 silly loadAllDepsIntoIdealTree Finishing
+116 silly idealTree:prePrune showmyfile@0.1.0
+116 silly idealTree:prePrune ├─┬ body-parser@1.11.0
+116 silly idealTree:prePrune │ ├── bytes@1.0.0
+116 silly idealTree:prePrune │ ├── depd@1.0.1
+116 silly idealTree:prePrune │ ├── iconv-lite@0.4.6
+116 silly idealTree:prePrune │ ├── media-typer@0.3.0
+116 silly idealTree:prePrune │ ├─┬ on-finished@2.2.1
+116 silly idealTree:prePrune │ │ └── ee-first@1.1.0
+116 silly idealTree:prePrune │ ├── qs@2.3.3
+116 silly idealTree:prePrune │ ├── raw-body@1.3.2
+116 silly idealTree:prePrune │ └─┬ type-is@1.5.7
+116 silly idealTree:prePrune │   └─┬ mime-types@2.0.14
+116 silly idealTree:prePrune │     └── mime-db@1.12.0
+116 silly idealTree:prePrune ├─┬ express@4.0.0
+116 silly idealTree:prePrune │ ├─┬ accepts@1.0.0
+116 silly idealTree:prePrune │ │ ├── mime@1.2.11
+116 silly idealTree:prePrune │ │ └── negotiator@0.3.0
+116 silly idealTree:prePrune │ ├── buffer-crc32@0.2.1
+116 silly idealTree:prePrune │ ├── cookie@0.1.0
+116 silly idealTree:prePrune │ ├── cookie-signature@1.0.3
+116 silly idealTree:prePrune │ ├── debug@0.8.1
+116 silly idealTree:prePrune │ ├── escape-html@1.0.1
+116 silly idealTree:prePrune │ ├── fresh@0.2.2
+116 silly idealTree:prePrune │ ├── merge-descriptors@0.0.2
+116 silly idealTree:prePrune │ ├── methods@0.1.0
+116 silly idealTree:prePrune │ ├── parseurl@1.0.1
+116 silly idealTree:prePrune │ ├── path-to-regexp@0.1.2
+116 silly idealTree:prePrune │ ├── qs@0.6.6
+116 silly idealTree:prePrune │ ├── range-parser@1.0.0
+116 silly idealTree:prePrune │ ├─┬ send@0.2.0
+116 silly idealTree:prePrune │ │ └── mime@1.2.11
+116 silly idealTree:prePrune │ ├─┬ serve-static@1.0.1
+116 silly idealTree:prePrune │ │ └─┬ send@0.1.4
+116 silly idealTree:prePrune │ │   ├── fresh@0.2.0
+116 silly idealTree:prePrune │ │   ├── mime@1.2.11
+116 silly idealTree:prePrune │ │   └── range-parser@0.0.4
+116 silly idealTree:prePrune │ ├─┬ type-is@1.0.0
+116 silly idealTree:prePrune │ │ └── mime@1.2.11
+116 silly idealTree:prePrune │ └── utils-merge@1.0.0
+116 silly idealTree:prePrune ├── nan@2.2.0
+116 silly idealTree:prePrune ├── robotjs@0.3.7
+116 silly idealTree:prePrune └─┬ socket.io@1.1.0
+116 silly idealTree:prePrune   ├── debug@0.7.4
+116 silly idealTree:prePrune   ├─┬ engine.io@1.4.0
+116 silly idealTree:prePrune   │ ├── base64id@0.1.0
+116 silly idealTree:prePrune   │ ├─┬ debug@1.0.3
+116 silly idealTree:prePrune   │ │ └── ms@0.6.2
+116 silly idealTree:prePrune   │ ├─┬ engine.io-parser@1.1.0
+116 silly idealTree:prePrune   │ │ ├── after@0.8.1
+116 silly idealTree:prePrune   │ │ ├── arraybuffer.slice@0.0.6
+116 silly idealTree:prePrune   │ │ ├── base64-arraybuffer@0.1.2
+116 silly idealTree:prePrune   │ │ ├── blob@0.0.2
+116 silly idealTree:prePrune   │ │ └── utf8@2.0.0
+116 silly idealTree:prePrune   │ └─┬ ws@0.4.31
+116 silly idealTree:prePrune   │   ├── commander@0.6.1
+116 silly idealTree:prePrune   │   ├── nan@0.3.2
+116 silly idealTree:prePrune   │   ├── options@0.0.6
+116 silly idealTree:prePrune   │   └── tinycolor@0.0.1
+116 silly idealTree:prePrune   ├─┬ has-binary-data@0.1.3
+116 silly idealTree:prePrune   │ └── isarray@0.0.1
+116 silly idealTree:prePrune   ├─┬ socket.io-adapter@0.2.0
+116 silly idealTree:prePrune   │ └─┬ socket.io-parser@2.1.2
+116 silly idealTree:prePrune   │   ├─┬ emitter@1.0.1
+116 silly idealTree:prePrune   │   │ └── indexof@0.0.1
+116 silly idealTree:prePrune   │   ├── isarray@0.0.1
+116 silly idealTree:prePrune   │   └── json3@3.2.6
+116 silly idealTree:prePrune   ├─┬ socket.io-client@1.1.0
+116 silly idealTree:prePrune   │ ├── component-bind@1.0.0
+116 silly idealTree:prePrune   │ ├── component-emitter@1.1.2
+116 silly idealTree:prePrune   │ ├─┬ engine.io-client@1.4.0
+116 silly idealTree:prePrune   │ │ ├── component-inherit@0.0.3
+116 silly idealTree:prePrune   │ │ ├─┬ engine.io-parser@1.1.0
+116 silly idealTree:prePrune   │ │ │ ├── after@0.8.1
+116 silly idealTree:prePrune   │ │ │ ├── arraybuffer.slice@0.0.6
+116 silly idealTree:prePrune   │ │ │ ├── base64-arraybuffer@0.1.2
+116 silly idealTree:prePrune   │ │ │ ├── blob@0.0.2
+116 silly idealTree:prePrune   │ │ │ └── utf8@2.0.0
+116 silly idealTree:prePrune   │ │ ├─┬ has-cors@1.0.3
+116 silly idealTree:prePrune   │ │ │ └── global@2.0.1
+116 silly idealTree:prePrune   │ │ ├─┬ parsejson@0.0.1
+116 silly idealTree:prePrune   │ │ │ └─┬ better-assert@1.0.2
+116 silly idealTree:prePrune   │ │ │   └── callsite@1.0.0
+116 silly idealTree:prePrune   │ │ ├─┬ parseqs@0.0.2
+116 silly idealTree:prePrune   │ │ │ └─┬ better-assert@1.0.2
+116 silly idealTree:prePrune   │ │ │   └── callsite@1.0.0
+116 silly idealTree:prePrune   │ │ ├─┬ parseuri@0.0.4
+116 silly idealTree:prePrune   │ │ │ └─┬ better-assert@1.0.2
+116 silly idealTree:prePrune   │ │ │   └── callsite@1.0.0
+116 silly idealTree:prePrune   │ │ ├─┬ ws@0.4.31
+116 silly idealTree:prePrune   │ │ │ ├── commander@0.6.1
+116 silly idealTree:prePrune   │ │ │ ├── nan@0.3.2
+116 silly idealTree:prePrune   │ │ │ ├── options@0.0.6
+116 silly idealTree:prePrune   │ │ │ └── tinycolor@0.0.1
+116 silly idealTree:prePrune   │ │ └── xmlhttprequest@1.5.0
+116 silly idealTree:prePrune   │ ├─┬ has-binary@0.1.5
+116 silly idealTree:prePrune   │ │ └── isarray@0.0.1
+116 silly idealTree:prePrune   │ ├── indexof@0.0.1
+116 silly idealTree:prePrune   │ ├── object-component@0.0.3
+116 silly idealTree:prePrune   │ ├─┬ parseuri@0.0.2
+116 silly idealTree:prePrune   │ │ └─┬ better-assert@1.0.2
+116 silly idealTree:prePrune   │ │   └── callsite@1.0.0
+116 silly idealTree:prePrune   │ ├─┬ socket.io-parser@2.2.2
+116 silly idealTree:prePrune   │ │ ├── benchmark@1.0.0
+116 silly idealTree:prePrune   │ │ ├── isarray@0.0.1
+116 silly idealTree:prePrune   │ │ └── json3@3.2.6
+116 silly idealTree:prePrune   │ └── to-array@0.1.3
+116 silly idealTree:prePrune   └─┬ socket.io-parser@2.2.1
+116 silly idealTree:prePrune     ├── benchmark@1.0.0
+116 silly idealTree:prePrune     ├── component-emitter@1.1.2
+116 silly idealTree:prePrune     ├── isarray@0.0.1
+116 silly idealTree:prePrune     └── json3@3.2.6
+117 silly loadIdealTree Finishing
+118 silly currentTree showmyfile@0.1.0
+118 silly currentTree ├─┬ body-parser@1.11.0
+118 silly currentTree │ ├── bytes@1.0.0
+118 silly currentTree │ ├── depd@1.0.1
+118 silly currentTree │ ├── iconv-lite@0.4.6
+118 silly currentTree │ ├── media-typer@0.3.0
+118 silly currentTree │ ├─┬ on-finished@2.2.1
+118 silly currentTree │ │ └── ee-first@1.1.0
+118 silly currentTree │ ├── qs@2.3.3
+118 silly currentTree │ ├── raw-body@1.3.2
+118 silly currentTree │ └─┬ type-is@1.5.7
+118 silly currentTree │   └─┬ mime-types@2.0.14
+118 silly currentTree │     └── mime-db@1.12.0
+118 silly currentTree ├─┬ express@4.0.0
+118 silly currentTree │ ├─┬ accepts@1.0.0
+118 silly currentTree │ │ ├── mime@1.2.11
+118 silly currentTree │ │ └── negotiator@0.3.0
+118 silly currentTree │ ├── buffer-crc32@0.2.1
+118 silly currentTree │ ├── cookie@0.1.0
+118 silly currentTree │ ├── cookie-signature@1.0.3
+118 silly currentTree │ ├── debug@0.8.1
+118 silly currentTree │ ├── escape-html@1.0.1
+118 silly currentTree │ ├── fresh@0.2.2
+118 silly currentTree │ ├── merge-descriptors@0.0.2
+118 silly currentTree │ ├── methods@0.1.0
+118 silly currentTree │ ├── parseurl@1.0.1
+118 silly currentTree │ ├── path-to-regexp@0.1.2
+118 silly currentTree │ ├── qs@0.6.6
+118 silly currentTree │ ├── range-parser@1.0.0
+118 silly currentTree │ ├─┬ send@0.2.0
+118 silly currentTree │ │ └── mime@1.2.11
+118 silly currentTree │ ├─┬ serve-static@1.0.1
+118 silly currentTree │ │ └─┬ send@0.1.4
+118 silly currentTree │ │   ├── fresh@0.2.0
+118 silly currentTree │ │   ├── mime@1.2.11
+118 silly currentTree │ │   └── range-parser@0.0.4
+118 silly currentTree │ ├─┬ type-is@1.0.0
+118 silly currentTree │ │ └── mime@1.2.11
+118 silly currentTree │ └── utils-merge@1.0.0
+118 silly currentTree └─┬ socket.io@1.1.0
+118 silly currentTree   ├── debug@0.7.4
+118 silly currentTree   ├─┬ engine.io@1.4.0
+118 silly currentTree   │ ├── base64id@0.1.0
+118 silly currentTree   │ ├─┬ debug@1.0.3
+118 silly currentTree   │ │ └── ms@0.6.2
+118 silly currentTree   │ ├─┬ engine.io-parser@1.1.0
+118 silly currentTree   │ │ ├── after@0.8.1
+118 silly currentTree   │ │ ├── arraybuffer.slice@0.0.6
+118 silly currentTree   │ │ ├── base64-arraybuffer@0.1.2
+118 silly currentTree   │ │ ├── blob@0.0.2
+118 silly currentTree   │ │ └── utf8@2.0.0
+118 silly currentTree   │ └─┬ ws@0.4.31
+118 silly currentTree   │   ├── commander@0.6.1
+118 silly currentTree   │   ├── nan@0.3.2
+118 silly currentTree   │   ├── options@0.0.6
+118 silly currentTree   │   └── tinycolor@0.0.1
+118 silly currentTree   ├─┬ has-binary-data@0.1.3
+118 silly currentTree   │ └── isarray@0.0.1
+118 silly currentTree   ├─┬ socket.io-adapter@0.2.0
+118 silly currentTree   │ └─┬ socket.io-parser@2.1.2
+118 silly currentTree   │   ├─┬ emitter@1.0.1
+118 silly currentTree   │   │ └── indexof@0.0.1
+118 silly currentTree   │   ├── isarray@0.0.1
+118 silly currentTree   │   └── json3@3.2.6
+118 silly currentTree   ├─┬ socket.io-client@1.1.0
+118 silly currentTree   │ ├── component-bind@1.0.0
+118 silly currentTree   │ ├── component-emitter@1.1.2
+118 silly currentTree   │ ├─┬ engine.io-client@1.4.0
+118 silly currentTree   │ │ ├── component-inherit@0.0.3
+118 silly currentTree   │ │ ├─┬ engine.io-parser@1.1.0
+118 silly currentTree   │ │ │ ├── after@0.8.1
+118 silly currentTree   │ │ │ ├── arraybuffer.slice@0.0.6
+118 silly currentTree   │ │ │ ├── base64-arraybuffer@0.1.2
+118 silly currentTree   │ │ │ ├── blob@0.0.2
+118 silly currentTree   │ │ │ └── utf8@2.0.0
+118 silly currentTree   │ │ ├─┬ has-cors@1.0.3
+118 silly currentTree   │ │ │ └── global@2.0.1
+118 silly currentTree   │ │ ├─┬ parsejson@0.0.1
+118 silly currentTree   │ │ │ └─┬ better-assert@1.0.2
+118 silly currentTree   │ │ │   └── callsite@1.0.0
+118 silly currentTree   │ │ ├─┬ parseqs@0.0.2
+118 silly currentTree   │ │ │ └─┬ better-assert@1.0.2
+118 silly currentTree   │ │ │   └── callsite@1.0.0
+118 silly currentTree   │ │ ├─┬ parseuri@0.0.4
+118 silly currentTree   │ │ │ └─┬ better-assert@1.0.2
+118 silly currentTree   │ │ │   └── callsite@1.0.0
+118 silly currentTree   │ │ ├─┬ ws@0.4.31
+118 silly currentTree   │ │ │ ├── commander@0.6.1
+118 silly currentTree   │ │ │ ├── nan@0.3.2
+118 silly currentTree   │ │ │ ├── options@0.0.6
+118 silly currentTree   │ │ │ └── tinycolor@0.0.1
+118 silly currentTree   │ │ └── xmlhttprequest@1.5.0
+118 silly currentTree   │ ├─┬ has-binary@0.1.5
+118 silly currentTree   │ │ └── isarray@0.0.1
+118 silly currentTree   │ ├── indexof@0.0.1
+118 silly currentTree   │ ├── object-component@0.0.3
+118 silly currentTree   │ ├─┬ parseuri@0.0.2
+118 silly currentTree   │ │ └─┬ better-assert@1.0.2
+118 silly currentTree   │ │   └── callsite@1.0.0
+118 silly currentTree   │ ├─┬ socket.io-parser@2.2.2
+118 silly currentTree   │ │ ├── benchmark@1.0.0
+118 silly currentTree   │ │ ├── isarray@0.0.1
+118 silly currentTree   │ │ └── json3@3.2.6
+118 silly currentTree   │ └── to-array@0.1.3
+118 silly currentTree   └─┬ socket.io-parser@2.2.1
+118 silly currentTree     ├── benchmark@1.0.0
+118 silly currentTree     ├── component-emitter@1.1.2
+118 silly currentTree     ├── isarray@0.0.1
+118 silly currentTree     └── json3@3.2.6
+119 silly idealTree showmyfile@0.1.0
+119 silly idealTree ├─┬ body-parser@1.11.0
+119 silly idealTree │ ├── bytes@1.0.0
+119 silly idealTree │ ├── depd@1.0.1
+119 silly idealTree │ ├── iconv-lite@0.4.6
+119 silly idealTree │ ├── media-typer@0.3.0
+119 silly idealTree │ ├─┬ on-finished@2.2.1
+119 silly idealTree │ │ └── ee-first@1.1.0
+119 silly idealTree │ ├── qs@2.3.3
+119 silly idealTree │ ├── raw-body@1.3.2
+119 silly idealTree │ └─┬ type-is@1.5.7
+119 silly idealTree │   └─┬ mime-types@2.0.14
+119 silly idealTree │     └── mime-db@1.12.0
+119 silly idealTree ├─┬ express@4.0.0
+119 silly idealTree │ ├─┬ accepts@1.0.0
+119 silly idealTree │ │ ├── mime@1.2.11
+119 silly idealTree │ │ └── negotiator@0.3.0
+119 silly idealTree │ ├── buffer-crc32@0.2.1
+119 silly idealTree │ ├── cookie@0.1.0
+119 silly idealTree │ ├── cookie-signature@1.0.3
+119 silly idealTree │ ├── debug@0.8.1
+119 silly idealTree │ ├── escape-html@1.0.1
+119 silly idealTree │ ├── fresh@0.2.2
+119 silly idealTree │ ├── merge-descriptors@0.0.2
+119 silly idealTree │ ├── methods@0.1.0
+119 silly idealTree │ ├── parseurl@1.0.1
+119 silly idealTree │ ├── path-to-regexp@0.1.2
+119 silly idealTree │ ├── qs@0.6.6
+119 silly idealTree │ ├── range-parser@1.0.0
+119 silly idealTree │ ├─┬ send@0.2.0
+119 silly idealTree │ │ └── mime@1.2.11
+119 silly idealTree │ ├─┬ serve-static@1.0.1
+119 silly idealTree │ │ └─┬ send@0.1.4
+119 silly idealTree │ │   ├── fresh@0.2.0
+119 silly idealTree │ │   ├── mime@1.2.11
+119 silly idealTree │ │   └── range-parser@0.0.4
+119 silly idealTree │ ├─┬ type-is@1.0.0
+119 silly idealTree │ │ └── mime@1.2.11
+119 silly idealTree │ └── utils-merge@1.0.0
+119 silly idealTree ├── nan@2.2.0
+119 silly idealTree ├── robotjs@0.3.7
+119 silly idealTree └─┬ socket.io@1.1.0
+119 silly idealTree   ├── debug@0.7.4
+119 silly idealTree   ├─┬ engine.io@1.4.0
+119 silly idealTree   │ ├── base64id@0.1.0
+119 silly idealTree   │ ├─┬ debug@1.0.3
+119 silly idealTree   │ │ └── ms@0.6.2
+119 silly idealTree   │ ├─┬ engine.io-parser@1.1.0
+119 silly idealTree   │ │ ├── after@0.8.1
+119 silly idealTree   │ │ ├── arraybuffer.slice@0.0.6
+119 silly idealTree   │ │ ├── base64-arraybuffer@0.1.2
+119 silly idealTree   │ │ ├── blob@0.0.2
+119 silly idealTree   │ │ └── utf8@2.0.0
+119 silly idealTree   │ └─┬ ws@0.4.31
+119 silly idealTree   │   ├── commander@0.6.1
+119 silly idealTree   │   ├── nan@0.3.2
+119 silly idealTree   │   ├── options@0.0.6
+119 silly idealTree   │   └── tinycolor@0.0.1
+119 silly idealTree   ├─┬ has-binary-data@0.1.3
+119 silly idealTree   │ └── isarray@0.0.1
+119 silly idealTree   ├─┬ socket.io-adapter@0.2.0
+119 silly idealTree   │ └─┬ socket.io-parser@2.1.2
+119 silly idealTree   │   ├─┬ emitter@1.0.1
+119 silly idealTree   │   │ └── indexof@0.0.1
+119 silly idealTree   │   ├── isarray@0.0.1
+119 silly idealTree   │   └── json3@3.2.6
+119 silly idealTree   ├─┬ socket.io-client@1.1.0
+119 silly idealTree   │ ├── component-bind@1.0.0
+119 silly idealTree   │ ├── component-emitter@1.1.2
+119 silly idealTree   │ ├─┬ engine.io-client@1.4.0
+119 silly idealTree   │ │ ├── component-inherit@0.0.3
+119 silly idealTree   │ │ ├─┬ engine.io-parser@1.1.0
+119 silly idealTree   │ │ │ ├── after@0.8.1
+119 silly idealTree   │ │ │ ├── arraybuffer.slice@0.0.6
+119 silly idealTree   │ │ │ ├── base64-arraybuffer@0.1.2
+119 silly idealTree   │ │ │ ├── blob@0.0.2
+119 silly idealTree   │ │ │ └── utf8@2.0.0
+119 silly idealTree   │ │ ├─┬ has-cors@1.0.3
+119 silly idealTree   │ │ │ └── global@2.0.1
+119 silly idealTree   │ │ ├─┬ parsejson@0.0.1
+119 silly idealTree   │ │ │ └─┬ better-assert@1.0.2
+119 silly idealTree   │ │ │   └── callsite@1.0.0
+119 silly idealTree   │ │ ├─┬ parseqs@0.0.2
+119 silly idealTree   │ │ │ └─┬ better-assert@1.0.2
+119 silly idealTree   │ │ │   └── callsite@1.0.0
+119 silly idealTree   │ │ ├─┬ parseuri@0.0.4
+119 silly idealTree   │ │ │ └─┬ better-assert@1.0.2
+119 silly idealTree   │ │ │   └── callsite@1.0.0
+119 silly idealTree   │ │ ├─┬ ws@0.4.31
+119 silly idealTree   │ │ │ ├── commander@0.6.1
+119 silly idealTree   │ │ │ ├── nan@0.3.2
+119 silly idealTree   │ │ │ ├── options@0.0.6
+119 silly idealTree   │ │ │ └── tinycolor@0.0.1
+119 silly idealTree   │ │ └── xmlhttprequest@1.5.0
+119 silly idealTree   │ ├─┬ has-binary@0.1.5
+119 silly idealTree   │ │ └── isarray@0.0.1
+119 silly idealTree   │ ├── indexof@0.0.1
+119 silly idealTree   │ ├── object-component@0.0.3
+119 silly idealTree   │ ├─┬ parseuri@0.0.2
+119 silly idealTree   │ │ └─┬ better-assert@1.0.2
+119 silly idealTree   │ │   └── callsite@1.0.0
+119 silly idealTree   │ ├─┬ socket.io-parser@2.2.2
+119 silly idealTree   │ │ ├── benchmark@1.0.0
+119 silly idealTree   │ │ ├── isarray@0.0.1
+119 silly idealTree   │ │ └── json3@3.2.6
+119 silly idealTree   │ └── to-array@0.1.3
+119 silly idealTree   └─┬ socket.io-parser@2.2.1
+119 silly idealTree     ├── benchmark@1.0.0
+119 silly idealTree     ├── component-emitter@1.1.2
+119 silly idealTree     ├── isarray@0.0.1
+119 silly idealTree     └── json3@3.2.6
+120 silly generateActionsToTake Starting
+121 silly install generateActionsToTake
+122 silly generateActionsToTake Finishing
+123 silly diffTrees action count 2
+124 silly diffTrees add nan@2.2.0
+125 silly diffTrees add robotjs@0.3.7
+126 silly decomposeActions action count 16
+127 silly decomposeActions fetch nan@2.2.0
+128 silly decomposeActions extract nan@2.2.0
+129 silly decomposeActions preinstall nan@2.2.0
+130 silly decomposeActions build nan@2.2.0
+131 silly decomposeActions install nan@2.2.0
+132 silly decomposeActions postinstall nan@2.2.0
+133 silly decomposeActions test nan@2.2.0
+134 silly decomposeActions finalize nan@2.2.0
+135 silly decomposeActions fetch robotjs@0.3.7
+136 silly decomposeActions extract robotjs@0.3.7
+137 silly decomposeActions preinstall robotjs@0.3.7
+138 silly decomposeActions build robotjs@0.3.7
+139 silly decomposeActions install robotjs@0.3.7
+140 silly decomposeActions postinstall robotjs@0.3.7
+141 silly decomposeActions test robotjs@0.3.7
+142 silly decomposeActions finalize robotjs@0.3.7
+143 silly executeActions Starting
+144 silly install executeActions
+145 silly doSerial global-install 0
+146 silly doParallel fetch 2
+147 verbose lock using C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\_locks\staging-fd453fa8ca23b6ec.lock for D:\workspace\showmyfiles\node_modules\.staging
+148 silly doParallel extract 2
+149 silly extract nan
+150 silly extract robotjs
+151 verbose unbuild node_modules\.staging\nan-1a4b31bc9b24a84b7d3e1c1bd8ba55bb
+152 verbose unbuild node_modules\.staging\robotjs-6eca9904ca9228685bfe6cd34c9d116c
+153 silly gentlyRm D:\workspace\showmyfiles\node_modules\.staging\nan-1a4b31bc9b24a84b7d3e1c1bd8ba55bb is being purged from base D:\workspace\showmyfiles
+154 silly gentlyRm D:\workspace\showmyfiles\node_modules\.staging\robotjs-6eca9904ca9228685bfe6cd34c9d116c is being purged from base D:\workspace\showmyfiles
+155 verbose gentlyRm don't care about contents; nuking D:\workspace\showmyfiles\node_modules\.staging\nan-1a4b31bc9b24a84b7d3e1c1bd8ba55bb
+156 verbose gentlyRm don't care about contents; nuking D:\workspace\showmyfiles\node_modules\.staging\robotjs-6eca9904ca9228685bfe6cd34c9d116c
+157 verbose tar unpack C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\nan\2.2.0\package.tgz
+158 verbose tar unpacking to D:\workspace\showmyfiles\node_modules\.staging\nan-1a4b31bc9b24a84b7d3e1c1bd8ba55bb
+159 silly gentlyRm D:\workspace\showmyfiles\node_modules\.staging\nan-1a4b31bc9b24a84b7d3e1c1bd8ba55bb is being purged
+160 verbose tar unpack C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\robotjs\0.3.7\package.tgz
+161 verbose tar unpacking to D:\workspace\showmyfiles\node_modules\.staging\robotjs-6eca9904ca9228685bfe6cd34c9d116c
+162 silly gentlyRm D:\workspace\showmyfiles\node_modules\.staging\robotjs-6eca9904ca9228685bfe6cd34c9d116c is being purged
+163 verbose gentlyRm don't care about contents; nuking D:\workspace\showmyfiles\node_modules\.staging\nan-1a4b31bc9b24a84b7d3e1c1bd8ba55bb
+164 verbose gentlyRm don't care about contents; nuking D:\workspace\showmyfiles\node_modules\.staging\robotjs-6eca9904ca9228685bfe6cd34c9d116c
+165 silly gunzTarPerm modes [ '777', '666' ]
+166 silly gunzTarPerm modes [ '777', '666' ]
+167 silly gunzTarPerm extractEntry package.json
+168 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+169 silly gunzTarPerm extractEntry package.json
+170 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+171 silly gunzTarPerm extractEntry README.md
+172 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+173 silly gunzTarPerm extractEntry include_dirs.js
+174 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+175 silly gunzTarPerm extractEntry .npmignore
+176 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+177 silly gunzTarPerm extractEntry README.md
+178 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+179 silly gunzTarPerm extractEntry test.js
+180 silly gunzTarPerm modified mode [ 'test.js', 420, 438 ]
+181 silly gunzTarPerm extractEntry index.js
+182 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+183 silly gunzTarPerm extractEntry nan_converters.h
+184 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+185 silly gunzTarPerm extractEntry LICENSE.md
+186 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+187 silly gunzTarPerm extractEntry .dntrc
+188 silly gunzTarPerm modified mode [ '.dntrc', 436, 438 ]
+189 silly gunzTarPerm extractEntry appveyor.yml
+190 silly gunzTarPerm modified mode [ 'appveyor.yml', 436, 438 ]
+191 silly gunzTarPerm extractEntry binding.gyp
+192 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+193 silly gunzTarPerm extractEntry .travis.yml
+194 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+195 silly gunzTarPerm extractEntry doc/new.md
+196 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+197 silly gunzTarPerm extractEntry doc/.build.sh
+198 silly gunzTarPerm modified mode [ 'doc/.build.sh', 509, 511 ]
+199 silly gunzTarPerm extractEntry doc/buffers.md
+200 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+201 silly gunzTarPerm extractEntry doc/callback.md
+202 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+203 silly gunzTarPerm extractEntry doc/converters.md
+204 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+205 silly gunzTarPerm extractEntry doc/errors.md
+206 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+207 silly gunzTarPerm extractEntry doc/maybe_types.md
+208 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+209 silly gunzTarPerm extractEntry doc/methods.md
+210 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+211 silly gunzTarPerm extractEntry test/all.js
+212 silly gunzTarPerm modified mode [ 'test/all.js', 420, 438 ]
+213 silly gunzTarPerm extractEntry test/mouse.js
+214 silly gunzTarPerm modified mode [ 'test/mouse.js', 420, 438 ]
+215 silly gunzTarPerm extractEntry doc/asyncworker.md
+216 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
+217 silly gunzTarPerm extractEntry doc/node_misc.md
+218 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
+219 silly gunzTarPerm extractEntry test/screen.js
+220 silly gunzTarPerm modified mode [ 'test/screen.js', 420, 438 ]
+221 silly gunzTarPerm extractEntry appveyor.yml
+222 silly gunzTarPerm modified mode [ 'appveyor.yml', 420, 438 ]
+223 silly gunzTarPerm extractEntry doc/object_wrappers.md
+224 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 438 ]
+225 silly gunzTarPerm extractEntry doc/persistent.md
+226 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
+227 silly gunzTarPerm extractEntry src/microsleep.h
+228 silly gunzTarPerm modified mode [ 'src/microsleep.h', 420, 438 ]
+229 silly gunzTarPerm extractEntry src/MMBitmap.c
+230 silly gunzTarPerm modified mode [ 'src/MMBitmap.c', 420, 438 ]
+231 silly gunzTarPerm extractEntry src/MMPointArray.c
+232 silly gunzTarPerm modified mode [ 'src/MMPointArray.c', 420, 438 ]
+233 silly gunzTarPerm extractEntry src/MMPointArray.h
+234 silly gunzTarPerm modified mode [ 'src/MMPointArray.h', 420, 438 ]
+235 silly gunzTarPerm extractEntry doc/scopes.md
+236 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
+237 silly gunzTarPerm extractEntry doc/script.md
+238 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
+239 silly gunzTarPerm extractEntry src/UTHashTable.c
+240 silly gunzTarPerm modified mode [ 'src/UTHashTable.c', 420, 438 ]
+241 silly gunzTarPerm extractEntry src/UTHashTable.h
+242 silly gunzTarPerm modified mode [ 'src/UTHashTable.h', 420, 438 ]
+243 silly gunzTarPerm extractEntry doc/string_bytes.md
+244 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 438 ]
+245 silly gunzTarPerm extractEntry doc/v8_internals.md
+246 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 438 ]
+247 silly gunzTarPerm extractEntry doc/v8_misc.md
+248 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
+249 silly gunzTarPerm extractEntry nan.h
+250 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+251 silly gunzTarPerm extractEntry src/alert.c
+252 silly gunzTarPerm modified mode [ 'src/alert.c', 420, 438 ]
+253 silly gunzTarPerm extractEntry src/alert.h
+254 silly gunzTarPerm modified mode [ 'src/alert.h', 420, 438 ]
+255 silly gunzTarPerm extractEntry src/base64.c
+256 silly gunzTarPerm modified mode [ 'src/base64.c', 420, 438 ]
+257 silly gunzTarPerm extractEntry src/base64.h
+258 silly gunzTarPerm modified mode [ 'src/base64.h', 420, 438 ]
+259 silly gunzTarPerm extractEntry nan_callbacks.h
+260 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 438 ]
+261 silly gunzTarPerm extractEntry src/bitmap_find.c
+262 silly gunzTarPerm modified mode [ 'src/bitmap_find.c', 420, 438 ]
+263 silly gunzTarPerm extractEntry src/bitmap_find.h
+264 silly gunzTarPerm modified mode [ 'src/bitmap_find.h', 420, 438 ]
+265 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+266 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
+267 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+268 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
+269 silly gunzTarPerm extractEntry src/bmp_io.c
+270 silly gunzTarPerm modified mode [ 'src/bmp_io.c', 420, 438 ]
+271 silly gunzTarPerm extractEntry src/bmp_io.h
+272 silly gunzTarPerm modified mode [ 'src/bmp_io.h', 420, 438 ]
+273 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+274 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
+275 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+276 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
+277 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+278 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+279 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+280 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+281 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+282 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
+283 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+284 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 438 ]
+285 silly gunzTarPerm extractEntry nan_new.h
+286 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+287 silly gunzTarPerm extractEntry nan_object_wrap.h
+288 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
+289 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+290 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
+291 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+292 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
+293 silly gunzTarPerm extractEntry nan_string_bytes.h
+294 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+295 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+296 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 438 ]
+297 silly gunzTarPerm extractEntry nan_weak.h
+298 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
+299 silly gunzTarPerm extractEntry CHANGELOG.md
+300 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+301 silly gunzTarPerm extractEntry tools/package.json
+302 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
+303 silly gunzTarPerm extractEntry tools/README.md
+304 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
+305 silly gunzTarPerm extractEntry tools/1to2.js
+306 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
+307 silly gunzTarPerm extractEntry src/color_find.c
+308 silly gunzTarPerm modified mode [ 'src/color_find.c', 420, 438 ]
+309 silly gunzTarPerm extractEntry src/color_find.h
+310 silly gunzTarPerm modified mode [ 'src/color_find.h', 420, 438 ]
+311 silly gunzTarPerm extractEntry src/deadbeef_rand.c
+312 silly gunzTarPerm modified mode [ 'src/deadbeef_rand.c', 420, 438 ]
+313 silly gunzTarPerm extractEntry src/deadbeef_rand.h
+314 silly gunzTarPerm modified mode [ 'src/deadbeef_rand.h', 420, 438 ]
+315 silly gunzTarPerm extractEntry src/endian.h
+316 silly gunzTarPerm modified mode [ 'src/endian.h', 420, 438 ]
+317 silly gunzTarPerm extractEntry src/inline_keywords.h
+318 silly gunzTarPerm modified mode [ 'src/inline_keywords.h', 420, 438 ]
+319 silly gunzTarPerm extractEntry src/io.c
+320 silly gunzTarPerm modified mode [ 'src/io.c', 420, 438 ]
+321 silly gunzTarPerm extractEntry src/io.h
+322 silly gunzTarPerm modified mode [ 'src/io.h', 420, 438 ]
+323 silly gunzTarPerm extractEntry src/keycode.c
+324 silly gunzTarPerm modified mode [ 'src/keycode.c', 420, 438 ]
+325 silly gunzTarPerm extractEntry src/keycode.h
+326 silly gunzTarPerm modified mode [ 'src/keycode.h', 420, 438 ]
+327 silly gunzTarPerm extractEntry src/keypress.c
+328 silly gunzTarPerm modified mode [ 'src/keypress.c', 420, 438 ]
+329 silly gunzTarPerm extractEntry src/keypress.h
+330 silly gunzTarPerm modified mode [ 'src/keypress.h', 420, 438 ]
+331 silly gunzTarPerm extractEntry src/MMBitmap.h
+332 silly gunzTarPerm modified mode [ 'src/MMBitmap.h', 420, 438 ]
+333 silly gunzTarPerm extractEntry src/mouse.c
+334 silly gunzTarPerm modified mode [ 'src/mouse.c', 420, 438 ]
+335 silly gunzTarPerm extractEntry src/mouse.h
+336 silly gunzTarPerm modified mode [ 'src/mouse.h', 420, 438 ]
+337 silly gunzTarPerm extractEntry src/ms_stdbool.h
+338 silly gunzTarPerm modified mode [ 'src/ms_stdbool.h', 420, 438 ]
+339 silly gunzTarPerm extractEntry src/ms_stdint.h
+340 silly gunzTarPerm modified mode [ 'src/ms_stdint.h', 420, 438 ]
+341 silly gunzTarPerm extractEntry src/os.h
+342 silly gunzTarPerm modified mode [ 'src/os.h', 420, 438 ]
+343 silly gunzTarPerm extractEntry src/pasteboard.c
+344 silly gunzTarPerm modified mode [ 'src/pasteboard.c', 420, 438 ]
+345 silly gunzTarPerm extractEntry src/pasteboard.h
+346 silly gunzTarPerm modified mode [ 'src/pasteboard.h', 420, 438 ]
+347 silly gunzTarPerm extractEntry src/png_io.c
+348 silly gunzTarPerm modified mode [ 'src/png_io.c', 420, 438 ]
+349 silly gunzTarPerm extractEntry src/png_io.h
+350 silly gunzTarPerm modified mode [ 'src/png_io.h', 420, 438 ]
+351 silly gunzTarPerm extractEntry src/rgb.h
+352 silly gunzTarPerm modified mode [ 'src/rgb.h', 420, 438 ]
+353 silly gunzTarPerm extractEntry src/robotjs.cc
+354 silly gunzTarPerm modified mode [ 'src/robotjs.cc', 420, 438 ]
+355 silly gunzTarPerm extractEntry src/screen.c
+356 silly gunzTarPerm modified mode [ 'src/screen.c', 420, 438 ]
+357 silly gunzTarPerm extractEntry src/screen.h
+358 silly gunzTarPerm modified mode [ 'src/screen.h', 420, 438 ]
+359 silly gunzTarPerm extractEntry src/screengrab.c
+360 silly gunzTarPerm modified mode [ 'src/screengrab.c', 420, 438 ]
+361 silly gunzTarPerm extractEntry src/screengrab.h
+362 silly gunzTarPerm modified mode [ 'src/screengrab.h', 420, 438 ]
+363 silly gunzTarPerm extractEntry src/snprintf.c
+364 silly gunzTarPerm modified mode [ 'src/snprintf.c', 420, 438 ]
+365 silly gunzTarPerm extractEntry src/snprintf.h
+366 silly gunzTarPerm modified mode [ 'src/snprintf.h', 420, 438 ]
+367 silly gunzTarPerm extractEntry src/str_io.c
+368 silly gunzTarPerm modified mode [ 'src/str_io.c', 420, 438 ]
+369 silly gunzTarPerm extractEntry src/str_io.h
+370 silly gunzTarPerm modified mode [ 'src/str_io.h', 420, 438 ]
+371 silly gunzTarPerm extractEntry src/types.h
+372 silly gunzTarPerm modified mode [ 'src/types.h', 420, 438 ]
+373 silly gunzTarPerm extractEntry src/uthash.h
+374 silly gunzTarPerm modified mode [ 'src/uthash.h', 420, 438 ]
+375 silly gunzTarPerm extractEntry src/xdisplay.c
+376 silly gunzTarPerm modified mode [ 'src/xdisplay.c', 420, 438 ]
+377 silly gunzTarPerm extractEntry src/xdisplay.h
+378 silly gunzTarPerm modified mode [ 'src/xdisplay.h', 420, 438 ]
+379 silly gunzTarPerm extractEntry src/zlib_util.c
+380 silly gunzTarPerm modified mode [ 'src/zlib_util.c', 420, 438 ]
+381 silly gunzTarPerm extractEntry src/zlib_util.h
+382 silly gunzTarPerm modified mode [ 'src/zlib_util.h', 420, 438 ]
+383 silly doParallel preinstall 2
+384 silly preinstall nan D:\workspace\showmyfiles\node_modules\.staging\nan-1a4b31bc9b24a84b7d3e1c1bd8ba55bb
+385 info lifecycle nan@2.2.0~preinstall: nan@2.2.0
+386 silly preinstall robotjs D:\workspace\showmyfiles\node_modules\.staging\robotjs-6eca9904ca9228685bfe6cd34c9d116c
+387 info lifecycle robotjs@0.3.7~preinstall: robotjs@0.3.7
+388 silly lifecycle nan@2.2.0~preinstall: no script for preinstall, continuing
+389 silly lifecycle robotjs@0.3.7~preinstall: no script for preinstall, continuing
+390 silly doReverseSerial remove 0
+391 silly doSerial move 0
+392 silly doSerial finalize 2
+393 silly finalize D:\workspace\showmyfiles\node_modules\nan
+394 silly finalize D:\workspace\showmyfiles\node_modules\robotjs
+395 silly doSerial build 2
+396 silly build nan
+397 info linkStuff nan@2.2.0
+398 silly linkStuff nan@2.2.0 has D:\workspace\showmyfiles\node_modules as its parent node_modules
+399 verbose linkBins nan@2.2.0
+400 verbose linkMans nan@2.2.0
+401 verbose rebuildBundles nan@2.2.0
+402 silly build robotjs
+403 info linkStuff robotjs@0.3.7
+404 silly linkStuff robotjs@0.3.7 has D:\workspace\showmyfiles\node_modules as its parent node_modules
+405 verbose linkBins robotjs@0.3.7
+406 verbose linkMans robotjs@0.3.7
+407 verbose rebuildBundles robotjs@0.3.7
+408 silly doSerial global-link 0
+409 silly doParallel update-linked 0
+410 silly doSerial install 2
+411 silly install nan D:\workspace\showmyfiles\node_modules\.staging\nan-1a4b31bc9b24a84b7d3e1c1bd8ba55bb
+412 info lifecycle nan@2.2.0~install: nan@2.2.0
+413 silly lifecycle nan@2.2.0~install: no script for install, continuing
+414 silly install robotjs D:\workspace\showmyfiles\node_modules\.staging\robotjs-6eca9904ca9228685bfe6cd34c9d116c
+415 info lifecycle robotjs@0.3.7~install: robotjs@0.3.7
+416 verbose lifecycle robotjs@0.3.7~install: unsafe-perm in lifecycle true
+417 verbose lifecycle robotjs@0.3.7~install: PATH: C:\Users\fabio.INTRANET\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;D:\workspace\showmyfiles\node_modules\robotjs\node_modules\.bin;D:\workspace\showmyfiles\node_modules\.bin;C:\ruby187\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\app\fabio\product\11.2.0\client_3\bin;D:\app\fabio\product\11.2.0\client_2;D:\app\fabio\product\11.2.0\client_2\bin;D:\app\fabio\product\11.2.0\client_1;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.7.0_17\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\EgisTec BioExcess\x64;C:\Program Files (x86)\EgisTec BioExcess\;D:\lib\phantomjs-1.9.7-windows;C:\Program Files (x86)\QuickTime\QTSystem\;C:\HashiCorp\Vagrant\bin;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\nodejs\;C:\Users\Public\Documents\RAD Studio\7.0\Bpl;C:\Chocolatey\bin;C:\Program Files (x86)\Git\cmd;C:\libjpeg-turbo64\bin;C:\OptiPNG;C:\PhantomJS;C:\Python27;D:\workspace\sdk-android\adb;d:\node-webkit-v0.11.5-win-x64;C:\Program Files\Oracle\VirtualBox;C:\Users\fabio.INTRANET\AppData\Local\Code\bin;C:\Users\fabio.INTRANET\AppData\Local\atom\bin;C:\Users\fabio.INTRANET\AppData\Roaming\npm;C:\Users\fabio.INTRANET\AppData\Local\Android\sdk\platform-tools
+418 verbose lifecycle robotjs@0.3.7~install: CWD: D:\workspace\showmyfiles\node_modules\robotjs
+419 silly lifecycle robotjs@0.3.7~install: Args: [ '/d /s /c', 'node-gyp rebuild' ]
+420 silly lifecycle robotjs@0.3.7~install: Returned: code: 1  signal: null
+421 info lifecycle robotjs@0.3.7~install: Failed to exec install script
+422 verbose unlock done using C:\Users\fabio.INTRANET\AppData\Roaming\npm-cache\_locks\staging-fd453fa8ca23b6ec.lock for D:\workspace\showmyfiles\node_modules\.staging
+423 silly rollbackFailedOptional Starting
+424 silly rollbackFailedOptional Finishing
+425 silly runTopLevelLifecycles Starting
+426 silly runTopLevelLifecycles Finishing
+427 silly install printInstalled
+428 warn EPACKAGEJSON showmyfile@0.1.0 No repository field.
+429 warn EPACKAGEJSON showmyfile@0.1.0 No license field.
+430 verbose stack Error: robotjs@0.3.7 install: `node-gyp rebuild`
+430 verbose stack Exit status 1
+430 verbose stack     at EventEmitter.<anonymous> (C:\Users\fabio.INTRANET\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:233:16)
+430 verbose stack     at emitTwo (events.js:87:13)
+430 verbose stack     at EventEmitter.emit (events.js:172:7)
+430 verbose stack     at ChildProcess.<anonymous> (C:\Users\fabio.INTRANET\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:24:14)
+430 verbose stack     at emitTwo (events.js:87:13)
+430 verbose stack     at ChildProcess.emit (events.js:172:7)
+430 verbose stack     at maybeClose (internal/child_process.js:817:16)
+430 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+431 verbose pkgid robotjs@0.3.7
+432 verbose cwd D:\workspace\showmyfiles
+433 error Windows_NT 6.1.7601
+434 error argv "C:\\Program Files (x86)\\nodejs\\node.exe" "C:\\Users\\fabio.INTRANET\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install" "robotjs"
+435 error node v4.1.0
+436 error npm  v3.3.4
+437 error code ELIFECYCLE
+438 error robotjs@0.3.7 install: `node-gyp rebuild`
+438 error Exit status 1
+439 error Failed at the robotjs@0.3.7 install script 'node-gyp rebuild'.
+439 error This is most likely a problem with the robotjs package,
+439 error not with npm itself.
+439 error Tell the author that this fails on your system:
+439 error     node-gyp rebuild
+439 error You can get their info via:
+439 error     npm owner ls robotjs
+439 error There is likely additional logging output above.
+440 verbose exit [ 1, true ]

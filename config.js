@@ -10,6 +10,6 @@ Min 100
 in milliseconds
 */
 
-config.timeGetScreen = 1000;
+config.timeGetScreen = 500;
 
 module.exports = config;

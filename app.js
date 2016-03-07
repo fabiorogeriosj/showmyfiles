@@ -15,7 +15,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 function getScreen(){
-  child = exec(__dirname+'/nircmd.fbi savescreenshot www/images/screen.png',
+  //var cmd = __dirname+'/nircmd.fbi savescreenshot www/images/screen.png';
+  var cmd = __dirname+'/cmdcapture.fbi /f screen.png /d www/images';
+  child = exec(cmd,
     function (error, stdout, stderr) {
       io.sockets.emit('showscreen');
       setTimeout(getScreen, config.timeGetScreen);
